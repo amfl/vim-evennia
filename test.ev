@@ -1,0 +1,15 @@
+# vim: set fdm=manual:
+#
+# I am some boring test text.
+# You can look at this file to check out the syntax highlighting.
+# TODO NOTE XXX todo additional text
+#
+@desc here =
+ The room is empty. You are {gconfused{n.
+ A portal just chills out here. {fn(arg1,arg2) Weird, dude.
+ {_not_valid_function() {invalid(. {\unmatched. {\_invalid
+ {function_name(){{{time(){{g {{{{{g {{{ {{{gyo {\function_name thing
+ Sure is {[g {[!f {![123 {[123 {!g {* colors and stuff {gin here
+ You suddenly have the urge to {lcclick on things{ltdo it...{le!
+#
+# Good end.
