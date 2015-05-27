@@ -14,9 +14,14 @@ setlocal iskeyword+=#-#
 syn case ignore
 
 " Evennia escapes special characters and colors with { character
-" Does not support inline functions (yet?)
 " See https://github.com/evennia/evennia/wiki/TextTags for specifics
-syn match evEscaped "{\@<!{[\[\!]\=\([0-9]\{3\}\|.\)"
+syn match evTextTag "\({{\)\{-}{[[!]\=\([0-9]\{3\}\|.\)"
+
+syn match evFunction "{[a-zA-Z][a-zA-Z_0-9]\+([^\)]*)"
+syn match evFunctionEnd "{\\[a-zA-Z][a-zA-Z_0-9]\+"
+
+syn match evLink "{l[cte]"
+
 syn match evDBRef "\<#[0-9]\+\>"
 
 " Commands
@@ -31,8 +36,10 @@ syn match evComment "^ *#.*$" contains=evTodo
 let b:current_syntax = "evennia"
 
 hi def link evDBRef Constant
-hi def link evEscaped Special
+hi def link evTextTag Special
+hi def link evFunction Function
+hi def link evFunctionEnd Function
+hi def link evLink Identifier
 hi def link evCommand Function
-hi def link evVariable Identifier
 hi def link evTodo Todo
 hi def link evComment Comment
