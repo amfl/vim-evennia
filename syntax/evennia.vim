@@ -13,8 +13,10 @@ setlocal iskeyword+=#-#
 
 syn case ignore
 
-" Evennia escapes newlines and colors with { character
-syn match evEscaped "{."
+" Evennia escapes special characters and colors with { character
+" Does not support inline functions (yet?)
+" See https://github.com/evennia/evennia/wiki/TextTags for specifics
+syn match evEscaped "{\@<!{[\[\!]\=\([0-9]\{3\}\|.\)"
 syn match evDBRef "\<#[0-9]\+\>"
 
 " Commands
