@@ -15,7 +15,7 @@ syn case ignore
 
 " Evennia escapes special characters and colors with { character
 " See https://github.com/evennia/evennia/wiki/TextTags for specifics
-syn match evTextTag "\({{\)\{-}{[[!]\=\([0-9]\{3\}\|.\)"
+syn match evTextTag "\({{\)\{-}{[[!]\=\([0-9]\{3\}\|.\)" contains=@NoSpell
 
 syn match evFunction "{[a-zA-Z][a-zA-Z_0-9]\+([^\)]*)"
 syn match evFunctionEnd "{\\[a-zA-Z][a-zA-Z_0-9]\+"
@@ -27,7 +27,7 @@ syn match evDBRef "\<#[0-9]\+\>"
 " Commands
 syn match evCommand "^[^ |^#]*\>"
 " Whole-line alternate
-" syn match evCommand "^@.*" contains=evEscaped,evDBRef
+" syn match evCommand "^@.*" contains=evTextTag,evDBRef
 
 " Comments
 syn keyword evTodo contained TODO FIXME XXX NOTE
