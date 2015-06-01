@@ -13,14 +13,19 @@ Based on Griatch's [evennia-mode.el](https://raw.githubusercontent.com/evennia/e
 
 Using pathogen:
 
-    $ cd ~/.vim/bundle
-    $ git clone https://github.com/amfl/vim-evennia
+``` bash
+$ cd ~/.vim/bundle
+$ git clone https://github.com/amfl/vim-evennia
+```
 
 Using Vundle:
 
-    Plugin 'amfl/vim-evennia'
+``` vim
+Plugin 'amfl/vim-evennia'
+```
 
 Using vim-plug:
 
-    Plug 'amfl/vim-evennia'
-
+``` vim
+Plug 'amfl/vim-evennia'
+```
