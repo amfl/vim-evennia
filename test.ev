@@ -5,11 +5,69 @@
 # TODO NOTE XXX todo additional text
 #
 @desc here =
- The room is empty. You are {gconfused{n.
- A portal just chills out here. {fn(arg1,arg2) Weird, dude.
- {_not_valid_function() {invalid(. {\unmatched. {\_invalid
- {function_name(){{{time(){{g {{{{{g {{{ {{{gyo {\function_name thing
- Sure is {[g {[!f {![123 {[123 {!g {* colors and stuff {gin here
- You suddenly have the urge to {lcclick on things{ltdo it...{le!
+ The room is empty. You are |gconfused|n.
+ A portal just chills out here. $fn(arg1,arg2) Weird, dude.
+ |function_name()|||time()||g |||||g ||| |||gyo {\function_name thing
+ Sure is |[g |[!f |![123 |[123 |!g |* colors and stuff |gin here
+ You suddenly have the urge to |lcclick on things|ltdo it...|le!
+
+ ||r literally prints a pipe followed by r.
+
+ Some single letters after | are invalid, like |k and |i and |K and |).
+
+ ANSI colors
+ -----------
+
+ |rred, |ggreen, |yyellow, |bblue, |mmagenta, |ccyan, |wwhite and |xblack.
+ |Rred, |Ggreen, |Yyellow, |Bblue, |Mmagenta, |Ccyan, |Wwhite and |Xblack.
+ |[rThis text has red background.|n This is normal text.
+ |b|[yThis is bright blue text on yellow background.|n This is normal text.
+ |[Gdark green bg
+ |[n and |!N are invalid.
+
+ |!R inherits brightness from the last color.
+ |!r is invalid. Colors must be uppercase after.
+ |![R and |[!R are invalid.
+
+ |h followed by |b makes a bright blue. |h|!G is equivalent to |g.
+ |H negates the effects, and makes colors dark again.
+ |!h and |!H and |[h are invalid.
+
+ 256 colors
+ ----------
+
+ |000 is pure black, |555 is pure white.
+ |[333 is a valid background.
+ |600, |40, |3 and |127 are invalid.
+ |!333 is invalid.
+
+ |=a greyscale black, |=m greyscale mid, |z greyscale white
+ And everything in between! |=b |=r |=j are all valid.
+ |[=a greyscale black bg, |[=m greyscale mid bg, |[=z greyscale white bg
+ |!=a and |=!a are invalid.
+ |=A and |=Z are invalid.
+
+ Special Symbols
+ ---------------
+
+ A line break is |/ symbol.
+ This is a tab |- asdasd
+ This is a space |_
+ |* is used to invert. |*R should not highlight the R.
+ |!* |[* is invalid.
+ |[ on its own is invalid, and so is |! Not to mention |[!g and |![g
+
+ Functions
+----------
+
+ This is some text $func() with $f(various, functions) embedded $inside.
+ You can $see(which $functions(are, valid) by $examining(closely,,).
+
+ DBRefs
+ ------
+
+ See #2344 #23. Full stop is fine.
+ Invalid: #123f or sdf#23 12#45
+ #213 is a comment!!
 #
 # Good end.
